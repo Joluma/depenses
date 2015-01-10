@@ -1,0 +1,78 @@
+<h2>Add a new expense</h2>
+
+<form class="ui form segment" ng-submit="addExpense()">
+  <div class="two fields">
+    <div class="field">
+      <div class="ui left icon input">
+        <input type="number" placeholder="Cost" ng-model="expense.cost"/>
+        <i class="icon yen"></i>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="inline fields">
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" ng-model="expense.type" value="cash" id="cash"/>
+            <label for="cash">espèces</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" ng-model="expense.type" value="card" id="card"/>
+            <label for="card">carte</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" ng-model="expense.type" value="check" id="check"/>
+            <label for="check">chèque</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="two fields">
+    <div class="field">
+      <select ng-model="expense.category" class="form-control" ng-options="category for category in categories">
+        <option value="">Catégorie</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <div class="ui left icon input">
+        <input type="text" placeholder="new category" ng-model="expense.newCategory"/>
+        <i class="icon plus"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="two fields">
+    <div class="field">
+      <div class="ui left icon input">
+        <input type="datetime-local" placeholder="date" ng-model="expense.date"/>
+        <i class="icon calendar"></i>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="ui left icon input">
+        <input type="text" placeholder="place" ng-model="expense.place"/>
+        <i class="icon location arrow"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="ui left icon input">
+      <input type="text" placeholder="description" ng-model="expense.description"/>
+      <i class="icon comments"></i>
+    </div>
+  </div>
+    
+  <button class="ui button teal" type="submit" ng-disabled="posting || !expense.cost">
+    <i class="icon save"></i>
+    Add
+  </button>
+</form>

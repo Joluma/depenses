@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="depenses">
+  <head>
+    <meta charset="utf-8"/>
+    <title>depenses</title>
+    <!-- inject:vendor:css -->
+    <link rel="stylesheet" href="/semantic-ui/dist/semantic.css">
+    <!-- endinject -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/expenses/expenses.css">
+    <link rel="stylesheet" href="/css/todo/todo.css">
+    <!-- endinject -->
+  </head>
+  <body>
+    <top-menu></top-menu>
+    <ng-view></ng-view>
+    <!-- inject:vendor:js -->
+    <script src="/angular/angular.js"></script>
+    <script src="/angular-route/angular-route.js"></script>
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/semantic-ui/dist/semantic.js"></script>
+    <script src="/ng-csv/build/ng-csv.min.js"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="/todo/todo.js"></script>
+    <script src="/todo/todo-controller.js"></script>
+    <script src="/app.js"></script>
+    <script src="/shared/top_menu.js"></script>
+    <script src="/expense/expense.js"></script>
+    <script src="/expense/expense-controller.js"></script>
+    <script src="/expenses/expenses.js"></script>
+    <script src="/expenses/expenses_list_controller.js"></script>
+    <script src="/expenses/expenses_controller.js"></script>
+    <script src="/expenses/expenses_add_controller.js"></script>
+    <script src="/depenses-templates.js"></script>
+    <!-- endinject -->
+  </body>
+</html>

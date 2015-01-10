@@ -1,0 +1,26 @@
+<h2>My expenses</h2>
+
+<div class="ui button green" ng-csv="expenses" csv-header="['Type', 'Montant (¥)', 'Date', 'Categorie', 'Lieu', 'Description']" filename="expenses.csv">
+  <i class="icon save"></i>
+  Extraire en csv
+</div>
+
+<ul class="todo-list">
+  <li class="todo-item" ng-repeat="expense in expenses">
+    <h3 ng-click="expandPanel($index)">
+      {{expense.cost | currency:"¥"}}
+      <em>{{expense.place}}</em>
+      <em class="pull-right">{{expense.date | date:'dd/MM/yyyy'}}</em>
+    </h3>
+
+    <div ng-show="isPanelSelected($index)">
+      <p>
+        {{expense.category}}
+        <em>{{expense.type}}</em>
+        <em class="pull-right">{{expense.date | date:'H:mm'}}</em>
+      </p>
+
+      <p>{{expense.description}}</p>
+    </div>
+  </li>
+</ul>
