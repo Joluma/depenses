@@ -12,7 +12,7 @@ angular
       $scope.addExpense = ->
         return if !$scope.expense.hasOwnProperty("cost")
         $scope.expenses.push($scope.expense)
-        $window.localStorage.setItem '$scope.expenses', JSON.stringify(angular.copy($scope.expenses))
+        $window.localStorage.setItem 'expenses', JSON.stringify(angular.copy($scope.expenses))
         $scope.resetExpense()
         window.location.hash = "#/list"
 
